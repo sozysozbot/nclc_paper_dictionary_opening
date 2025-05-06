@@ -22,6 +22,7 @@ const vivliostyleConfig = {
     '0_06_authors.html',
     '0_07_linzklar_start.html',
     '0_08_how_to_use_linzklar.html',
+    '0_09_grammar_linzklar.html',
   ], // 'entry' can be 'string' or 'object' if there's only single markdown file
   // entryContext: './manuscripts', // default to '.' (relative to 'vivliostyle.config.js')
   output: [ "../言将机戦人等_網別言書_始.pdf" ] // path to generate draft file(s). default to '{title}.pdf'

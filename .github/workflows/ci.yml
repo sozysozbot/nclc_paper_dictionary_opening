@@ -28,10 +28,14 @@ jobs:
         run: |
           curl -L -o fonts/SourceHanSerif-Regular.otf "https://github.com/adobe-fonts/source-han-serif/raw/release/OTF/Japanese/SourceHanSerif-Regular.otf"
 
+      - name: Source Han Sans Regular のダウンロード
+        run: |
+          curl -L -o fonts/SourceHanSans-Regular.otf "https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/Japanese/SourceHanSans-Regular.otf"
+
       - name: M+ 1p Heavy のダウンロード
         run: |
           curl -L -o fonts/Mplus1p-Heavy.ttf "https://github.com/rayshan/mplus-fonts/raw/refs/heads/master/fonts/mplus-1p-heavy.ttf"
-
+  
       - name: Xedixel のダウンロード
         run: |
           curl -L -o fonts/xedixel.ttf "https://github.com/yasusho/qafopwa_pmcp_font/raw/refs/heads/main/xedixel/xedixel.ttf"
