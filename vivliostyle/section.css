@@ -1,0 +1,149 @@
+:root {
+    column-count: 2;
+    --scale: 0.93;
+}
+
+.group-char-entry-with-the-following {
+    break-inside: avoid;
+}
+
+.char-entry {
+    margin-top: 2.2mm;
+    margin-bottom: -2mm;
+}
+
+.entry {
+    break-inside: avoid;
+    margin-top: 2.2mm;
+    font-size: calc(12pt * var(--scale));
+}
+
+.entry > span {
+    display: inline-block;
+    break-inside: avoid;
+}
+
+.entry-word-pronunciation {
+    font-size: calc(9pt * var(--scale));
+    font-weight: bold;
+    font-family: "Source Han Serif Heavy";
+    line-break: strict; 
+}
+
+.entry-word-transcription {
+    font-size: calc(9pt * var(--scale));
+    font-weight: bold;
+    font-family: "Source Han Serif Heavy";
+}
+
+.entry-word-linzklar {
+    font-size: calc(12pt * var(--scale));
+    font-weight: normal;
+    font-family: "linzklar_rounded";
+}
+
+.inline-linzklar {
+    font-size: calc(9pt * var(--scale));
+    font-weight: normal;
+    font-family: "linzklar_rounded";
+}
+
+.char-entry-linzklar {
+    font-size: calc(24pt * var(--scale));
+    font-weight: normal;
+    font-family: "linzklar_rounded";
+}
+
+.sub {
+    margin-top: -1mm;
+    line-height: 1;
+    margin-left: 3.5mm;
+}
+
+.sub-POS {
+    /* 子見出し（品詞） */
+    font-size: calc(9pt * var(--scale));
+    font-family: "Source Han Serif SemiBold";
+    font-weight: bold;
+}
+
+.sub-definition {
+    /* 子見出しの語釈 */
+    font-size: calc(9pt * var(--scale));
+    font-family: "Source Han Serif";
+    line-height: 1.05;
+}
+
+div.sample-sentence {
+    font-size: calc(9pt * var(--scale));
+    margin-top: 1.5mm;
+}
+
+.sample-sentence > span {
+    display: inline-block;
+    break-inside: avoid;
+}
+
+.sample-sentence-linzklar {
+    font-size: calc(10pt * var(--scale));
+    font-family: "linzklar_rounded";
+    line-height: 1.05;
+}
+
+.sample-sentence-pronunciation {
+    font-size: calc(6pt * var(--scale));
+    font-family: "Source Han Serif";
+    line-height: 1.05;
+    line-break: strict; 
+}
+
+.sample-sentence-transcription {
+    font-size: calc(9pt * var(--scale));
+    font-family: "Source Han Serif";
+    line-height: 1.05;
+}
+
+.sample-sentence-translation {
+    font-size: calc(9pt * var(--scale));
+    font-family: "Source Han Serif";
+    line-height: 1.05;
+    margin-left: 3.5mm;
+}
+
+header {
+    float: block-start;
+    float-reference: page;
+}
+
+.redirect_to_char a::after {
+    content: target-counter(attr(href url), page);
+}
+
+.redirect_to_char a {
+    font-size: calc(9pt * var(--scale));
+    font-family: "Source Han Serif";
+    text-decoration: none;
+    color: inherit;
+}
+
+.redirect_to_char .target-linzklar {
+    font-size: calc(12pt * var(--scale));
+    font-weight: normal;
+    font-family: "linzklar_rounded";
+    position: relative;
+    top: .2em;
+    padding-left: .2em;
+}
+
+@page {
+    size: 128mm 182mm
+        /* JIS B6 */
+    ;
+    margin: 5% 10% 2% 10%;
+
+    @top-center {
+        content: counter(page);
+        font-family: "Times New Roman";
+        font-size: 14pt;
+    }
+}
